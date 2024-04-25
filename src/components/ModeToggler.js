@@ -4,15 +4,22 @@ export default function ModeToggler() {
   let darkModeOn = true;
   const darkMode = <h1>Dark Mode On</h1>;
   const lightMode = <h1>Light Mode On</h1>;
-  const oya = <h3>Your media don load ohh (: </h3>;
+  const oya = (
+    <h3>
+      We don load the video from youtube I did this by using React state and the
+      onReady prop. in React video. Once the video loads, this prompt comes up
+      and once you click anywhere on this div, it would clear as it would return
+      back to the default state.(:{" "}
+    </h3>
+  );
 
-  const [alertMessage, setAlertMessage] = useState(null);
+  const [alertMessage, setAlertMessage] = useState("");
 
   const showAlert = (message) => {
     setAlertMessage(message);
   };
   function handler() {
-    darkModeOn = !darkModeOn;
+    let darkModeOn = !darkModeOn;
     if (darkModeOn === true) {
       return darkMode;
     } else if (darkModeOn === false) {
@@ -22,12 +29,8 @@ export default function ModeToggler() {
 
   return (
     <div>
-      <div>
-        {alertMessage && (
-          <div className="alert" onClick={() => setAlertMessage(null)}>
-            {alertMessage}
-          </div>
-        )}
+      <div className="alert" onClick={() => setAlertMessage("")}>
+        {alertMessage}
       </div>
       {darkModeOn ? darkMode : lightMode}
       <button onClick={handler}> Click Me to change display mode.</button>
