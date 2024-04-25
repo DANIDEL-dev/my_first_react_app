@@ -6,10 +6,10 @@ export default function ModeToggler() {
   const lightMode = <h1>Light Mode On</h1>;
   const oya = (
     <h3>
-      We don load the video from youtube I did this by using React state and the
-      onReady prop. in React video. Once the video loads, this prompt comes up
-      and once you click anywhere on this div, it would clear as it would return
-      back to the default state.(:{" "}
+      I did this by using React state and the onReady prop. in React
+      video...Once the video loads, this prompt comes up and once you click
+      anywhere on this div, it would clear as it would return back to the
+      default state.
     </h3>
   );
 
@@ -19,7 +19,6 @@ export default function ModeToggler() {
     setAlertMessage(message);
   };
   function handler() {
-    let darkModeOn = !darkModeOn;
     if (darkModeOn === true) {
       return darkMode;
     } else if (darkModeOn === false) {
