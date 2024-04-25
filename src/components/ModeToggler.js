@@ -28,7 +28,7 @@ export default function ModeToggler() {
   }
 
   return (
-    <div className="alert">
+    <div className="alert" onClick={() => setAlertMessage("")}>
       {alertMessage}
       <button onClick={handler}> Click </button>
       <ReactPlayer
