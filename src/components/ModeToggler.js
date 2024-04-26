@@ -35,6 +35,8 @@ export default function ModeToggler() {
         controls
         muted={true}
         pip={true}
+        playing={true}
+        volume={0.9}
         onReady={() => showAlert(oya)}
         url="https://www.youtube.com/watch?v=O6P86uwfdR0&list=RDCMUCFbNIlppjAuEX4znoulh0Cw&start_radio=1&t=172s&ab_channel=WebDevSimplified"
       />
